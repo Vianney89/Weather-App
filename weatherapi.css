@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@font-face 
+{
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #141114;
+    background-image: 
+        linear-gradient(335deg, #000000 23px, transparent 23px),
+        linear-gradient(155deg, #000000 23px, transparent 23px),
+        linear-gradient(335deg, #000000 23px, transparent 23px),
+        linear-gradient(155deg, #000000 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    color: azure;
+    font-family: 'Abel', sans-serif;
+}
+
+#mainContainer {
+    width: 80%;
+    margin: auto;
+}
+
+#description {
+    margin-bottom: 10px;
+}
+
+.sign {
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #E47F00,
+      transparent
+    );
+    letter-spacing: 2;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #4c5256;
+    text-shadow: 0 0 0.6rem gold, 0 0 1.5rem #F3E2A7,
+      -0.2rem 0.1rem 1rem #F3E2A7, 0.2rem 0.1rem 1rem #F3E2A7,
+      0 -0.5rem 2rem #4c5256, 0 0.5rem 3rem #4c5256;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: gold;
+      text-shadow: 0 0 0.6rem gold, 0 0 1.5rem #F3E2A7,
+        -0.2rem 0.1rem 1rem #F3E2A7, 0.2rem 0.1rem 1rem #F3E2A7,
+        0 -0.5rem 2rem #4c5256, 0 0.5rem 3rem #4c5256;
+    }
+    28%,
+    33% {
+      color: #F3E2A7;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #4c5256;
+      text-shadow: none;
+    }
+}
+
+.flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  
+}
+  
+.fast-flicker {
+animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+    0% {
+      color: #E47F00;
+      text-shadow: none;
+    }
+    100% {
+      color: gold;
+      text-shadow: 0 0 0.6rem gold, 0 0 1.5rem #F3E2A7,
+        -0.2rem 0.1rem 1rem #F3E2A7, 0.2rem 0.1rem 1rem #F3E2A7,
+        0 -0.5rem 2rem #4c5256, 0 0.5rem 3rem #4c5256;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }  
+
+#search {
+    /* box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075),0 0 8px rgba(212, 0, 255, 0.6); */
+    border-radius: 9999rem;
+}
+#search>input {
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075),0 0 8px rgba(228, 127, 0, 0.6);
+    font-family: 'Abel', sans-serif;
+    padding:10px;
+    border-radius: inherit;
+    outline: none;
+    border: none;
+    width: 95%;
+    margin: auto;;
+}
+
+#cityName{
+    font-size: 1.4em;
+    height: 30px;
+    width: 100%;
+}
+
+#weather {
+    height: auto; 
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+#mainDay {
+    height: auto;
+    width: 100%;
+}
+#otherDays {
+    height: auto;
+    display: flex;
+}
+#otherDays>div {
+    width: 25%;
+}
+#cityNameText {
+    font-size: 2em;
+}
+#temp {
+    font-size: 2em;
+}
+#weather span {
+    display: inline-block;
+    padding-left: 10px;
+    width: 15%;
+    font-size: 0.7em;
+}
+.forecast{
+    /* border: 0.5px solid black; */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1% 1% 1% 1%;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+/* NOT FOUND */
+#notFoundContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+    font-size: 96px;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: -7px;
+}
+#notFound{
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  #notFound:before,
+  #notFound:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  #notFound:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  #notFound:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+
+  #listCities {
+    display: none; /* works only with autocomplete.js Need to comment it with autocomplete2.js*/
+    border-top-width: 0;
+    width: 70%;
+    left:15%;
+    z-index: 100;
+    position: absolute;
+  }
+
+  #listCities div {
+    color : black;
+    padding: 2px 4px;
+    text-align: center;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px grey dotted;
+  }
+
+  #listCities div:hover, #listCities div.result_focus {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
